@@ -5,7 +5,7 @@ using namespace std;
 
 #define N 4096
 #define RADIUS 3
-#define BLOCK_SIZE 16
+#define BLOCK_SIZE 512
 
 __global__ void stencil_1d(int *in, int *out) {
     __shared__ int temp[BLOCK_SIZE + 2 * RADIUS];
